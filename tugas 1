@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string nama, sekolah;
+    char lagi;
+    int no = 1;
+
+    do {
+        cout << "Data ke-" << no << endl;
+        cout << "Nama    : ";
+        getline(cin, nama);
+        cout << "Sekolah : ";
+        getline(cin, sekolah);
+
+        cout << "Halo " << nama << " dari " << sekolah << endl;
+
+        cout << "Input lagi? (y/t) : ";
+        cin >> lagi;
+        cin.ignore();
+        cout << endl;
+
+        no++;
+    } while (lagi == 'y' || lagi == 'Y');
+
+    cout << "Selesai, total data: " << no - 1 << endl;
+    return 0;
+}
