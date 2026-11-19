@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int pilih, jumlah, total = 0, bayar;
+    char lagi;
+
+    do {
+        cout << "1. Soto  15000" << endl;
+        cout << "2. Rawon 20000" << endl;
+        cout << "3. Pecel 10000" << endl;
+        cout << "4. Teh   3000" << endl;
+        cout << "5. Kopi  5000" << endl;
+        cout << "Pilih : ";
+        cin >> pilih;
+        cout << "Jumlah : ";
+        cin >> jumlah;
+
+        if (pilih == 1) total += 15000 * jumlah;
+        else if (pilih == 2) total += 20000 * jumlah;
+        else if (pilih == 3) total += 10000 * jumlah;
+        else if (pilih == 4) total += 3000 * jumlah;
+        else if (pilih == 5) total += 5000 * jumlah;
+        else cout << "Menu tidak ada" << endl;
+
+        cout << "Tambah lagi? (y/t) : ";
+        cin >> lagi;
+    } while (lagi == 'y');
+
+    cout << "Total : " << total << endl;
+    cout << "Bayar : ";
+    cin >> bayar;
+    cout << "Kembali : " << bayar - total << endl;
+
+    return 0;
+}
